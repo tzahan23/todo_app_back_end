@@ -1,8 +1,11 @@
 class TodoController < ApplicationController
+  @order = 0
     def index
         @number = 2
     end
     def show
+      @or = @order
+      @description = params[:description]
       if params[:id] == "1"
         @task= "Physics homework"
       elsif params[:id]== "2"
@@ -19,6 +22,7 @@ class TodoController < ApplicationController
           t = Todo.new
           t.description = params['description']
           t.order = params['order']
+          @order = params['order']
           t.save
           redirect_to "/todo/show/#{ t.id }"
     end
