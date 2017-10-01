@@ -4,8 +4,7 @@ class TodoController < ApplicationController
         @number = 2
     end
     def show
-      @or = @order
-      @description = params[:description]
+      @todo = Todo.find (params[:id])
       if params[:id] == "1"
         @task= "Physics homework"
       elsif params[:id]== "2"

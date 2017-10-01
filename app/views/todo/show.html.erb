@@ -1,6 +1,6 @@
 <html>
         <Title>My To Do Webpage</Title>
         <h1>#<%=params[:id] %> <%= @task %></h1>
-        <h1>#<%=params[:description] %> <%= @description %></h1>
-          <h1>#<%=params[:order] %> <%= @order %></h1>
+        <h1><%= @todo.description %></h1>
+          <h1><%= @todo.order %></h1>
 </html>
