@@ -11,6 +11,8 @@ class TodoController < ApplicationController
         @task=  "Trig homework"    
       elsif params[:id] == "4"
         @task= "Spanish homework"
+      end  
     end
+    def new
     end
 end
